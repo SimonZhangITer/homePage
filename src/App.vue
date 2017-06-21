@@ -1,86 +1,156 @@
 <template>
-<div id="app">
-  <div class="wrapper">
-    <h1 class="masked">Simon Zhang</h1>
-    <h2 ref="text"></h2>
-    <p><a href="./archives/">Blog</a></p>
-    <p><a href="https://github.com/SimonZhangITer">GitHub</a></p>
-    <p><a href="https://twitter.com/SimonZhangr">Twitter</a></p>
-    <p><a href="http://weibo.com/3120797583/profile?topnav=1&wvr=6">微博</a></p>
-    <p><a href="https://www.zhihu.com/people/SimonZhangR/activities">知乎</a></p>
-  </div>
-</div>
+  <main class="container">
+    <section class="content">
+      <h1 class="masked">Simon Zhang</h1>
+      <p>Web Front End Engineer</p>
+      <a href="./archives/" title="Blog" class="blog">Blogs</a>
+    </section>
+    <div class="footer">
+      <a href="https://github.com/SimonZhangITer" target="_blank"><i class="iconfont icon-github"></i></a>
+      <a href="https://twitter.com/SimonZhangr" target="_blank"><i class="iconfont icon-twitter"></i></a>
+      <a href="http://weibo.com/simonzhangr" target="_blank"><i class="iconfont icon-weibo"></i></a>
+      <a href="https://www.zhihu.com/people/SimonZhangR" target="_blank"><i class="iconfont icon-zhihu_circle"></i></a>
+    </div>
+  </main>
 </template>
 
 <script>
-// let str = 'Love Code & Love Beautiful Things'
-let str = 'Love Code & Love Beauty & Love Life'
-let pos = 0
-let len = str.length
+import 'font-awesome/css/font-awesome.min.css'
+
 export default {
-  name: 'homepage',
-  mounted() {
-    this.printer()
-  },
-  methods: {
-    printer() {
-      let text = this.$refs.text
-      text.innerHTML = str.substring(0, pos) + (pos >= len ? '' : "|")
-      if (pos++ >= str.length) {
-        return
-      }
-      setTimeout(() => {
-        this.printer()
-      }, 200);
-    }
-  }
+  name: 'homepage'
 }
 </script>
 
 <style lang="stylus">
 $font-color = #999
-#app
+body
+  position absolute
+  height 100%
+  width 100%
+  margin 0
+.container
+  display flex
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
   font-family 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif
   color #333
-  .masked{
-      background-image: -webkit-linear-gradient(left, #147B96, rgba(163, 228, 208, 0.71) 25%, #147B96 50%, rgba(163, 228, 208, 0.71) 75%, #147B96);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      -webkit-background-size: 200% 100%;
-      -webkit-animation: masked-animation 4s infinite linear;
-  }
-  @keyframes masked-animation {
-      0%  { background-position: 0 0;}
-      100% { background-position: -100% 0;}
-  }
-  .wrapper
-    position absolute
-    left 0
-    width 320px
+  background-color #f9f9f9
+  .content
+    position relative
     text-align center
-    top 50%
-    left 50%
-    margin-left -160px
-    margin-top -160px
     user-select none
     h1
-      font-size 25px
-      letter-spacing 3px
-    h2
-      color $font-color
-      font-weight normal
-      font-size 14px
-      letter-spacing 2px
-      margin-bottom 30px
-    p
+      color: #21211f;
+      font-size: 8rem;
+      padding: 0;
       margin 0
-      line-height 26px
-      a
-        font-size 15px
-        text-decoration none
-        color $font-color
-        transition all .2s ease
-        letter-spacing 2px
-        &:hover
-          color red
+      letter-spacing: -0.5rem;
+      font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
+      font-style: normal;
+      font-weight: 900;
+    p
+      position absolute
+      margin-top -2.5rem
+      color: #21211f;
+      font-size: 1.2rem;
+      letter-spacing: 0.135rem;
+      padding: 0 0 0 23.8rem
+      font-family: "Sentinel A", "Sentinel B";
+      font-style: normal;
+      font-weight: 400;
+    .blog
+      position relative
+      float left
+      margin-top -2rem
+      font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
+      font-weight: 500;
+      background: #e22a25;
+      border-radius: 50px;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.4rem;
+      text-transform: uppercase;
+      color: #fff;
+      transition: all 0.5s ease;
+      text-decoration none
+      &:hover
+        background: #21211f;
+	      transition: all 0.5s ease;
+  .footer
+    position absolute
+    bottom 35px
+    a
+      padding: 0 0.5rem;
+      color: #21211f;
+      font-size: 30px;
+      transition: all 0.5s ease;
+      cursor pointer
+      text-decoration none
+      .iconfont
+        font-size inherit
+        transition: all 0.5s ease;
+      .icon-github:hover
+      	color: #92928f;
+      .icon-twitter:hover
+      	color: #1da1f2;
+      .icon-weibo:hover
+      	color: #e6162d;
+      .icon-zhihu_circle:hover
+      	color: #0f88eb;
+
+/***** Responsiveness *****/
+@media all and (max-width: 740px)
+	html, body
+		font-size: 10px;
+
+	main.container section.content
+    .blog
+      margin: 40px auto;
+      display: block;
+      padding: 1.35rem 1.5rem;
+      font-size: 1.4rem;
+      float none
+    p
+      padding: 0 0 0 19.4rem;
+      margin-top -2rem
+
+@media all and (max-width: 440px)
+	html, body
+		font-size: 8px;
+	main.container section.content
+   .blog
+      margin: 40px auto;
+      display: block;
+      padding: 1.55rem 1.5rem;
+      font-size: 1.6rem;
+      float none
+    p
+      padding: 0 0 0 14.8rem;
+      letter-spacing: 0px;
+      margin-top: -1.8rem;
+	.footer a
+		font-size: 25px;
+
+@media all and (max-width: 337px)
+	html, body
+		font-size: 8px;
+	main.container section.content
+   h1
+      font-size 7rem
+   .blog
+      margin: 30px;
+      display: block;
+      padding: 1rem 1rem;
+      font-size: 1.6rem;
+      float none
+    p
+      padding: 0 0 0 10.5rem;
+      letter-spacing: 0px;
+      margin-top: -1.8rem;
+	.footer a
+		font-size: 25px;
 </style>
