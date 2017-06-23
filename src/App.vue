@@ -36,7 +36,7 @@ body
   margin: 0;
   align-items: center;
   justify-content: center;
-  font-family 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif
+  font-family 'Helvetica Neue', Arial, sans-serif
   color #333
   background-color #f9f9f9
   .content
@@ -118,7 +118,7 @@ body
       font-size: 1.4rem;
       float none
     p
-      padding: 0 0 0 222px;
+      padding: 0 0 0 228px;
       margin-top -16px
 
 @media all and (max-width: 440px)
@@ -132,13 +132,14 @@ body
       font-size: 1.6rem;
       float none
     p
-      padding: 0 0 0 170px;
+      padding: 0 0 0 183px;
       letter-spacing: 0px;
       margin-top: -14px;
+      font-size 12px
 	.footer a
 		font-size: 25px;
 
-@media all and (max-width: 337px)
+@media all and (max-width: 348px)
 	html, body
 		font-size: 8px;
 	main.container section.content
@@ -151,9 +152,10 @@ body
       font-size: 1.6rem;
       float none
     p
-      padding: 0 0 0 122px;
+      padding: 0 0 0 156px;
       letter-spacing: 0px;
-      margin-top: -14px;
+      margin-top: -13px;
+      font-size 11px
 	.footer a
 		font-size: 25px;
 </style>
