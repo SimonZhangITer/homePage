@@ -49,24 +49,24 @@ body
       padding: 0;
       margin 0
       letter-spacing: -0.5rem;
-      font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
+      // font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
       font-style: normal;
-      font-weight: 900;
+      font-weight: 500;
     p
       position absolute
-      margin-top -2.5rem
+      margin-top -27px
       color: #21211f;
       font-size: 1.2rem;
       letter-spacing: 0.135rem;
-      padding: 0 0 0 23.8rem
-      font-family: "Sentinel A", "Sentinel B";
+      padding: 0 0 0 365px
+      // font-family: "Sentinel A", "Sentinel B";
       font-style: normal;
       font-weight: 400;
     .blog
       position relative
       float left
-      margin-top -2rem
-      font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
+      margin-top -20px
+      // font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B";
       font-weight: 500;
       background: #e22a25;
       border-radius: 50px;
@@ -82,7 +82,10 @@ body
 	      transition: all 0.5s ease;
   .footer
     position absolute
+    left 0
+    right 0
     bottom 35px
+    text-align center
     a
       padding: 0 0.5rem;
       color: #21211f;
@@ -115,8 +118,8 @@ body
       font-size: 1.4rem;
       float none
     p
-      padding: 0 0 0 19.4rem;
-      margin-top -2rem
+      padding: 0 0 0 222px;
+      margin-top -16px
 
 @media all and (max-width: 440px)
 	html, body
@@ -125,13 +128,13 @@ body
    .blog
       margin: 40px auto;
       display: block;
-      padding: 1.55rem 1.5rem;
+      padding: 1.25rem 1.5rem;
       font-size: 1.6rem;
       float none
     p
-      padding: 0 0 0 14.8rem;
+      padding: 0 0 0 170px;
       letter-spacing: 0px;
-      margin-top: -1.8rem;
+      margin-top: -14px;
 	.footer a
 		font-size: 25px;
 
@@ -148,9 +151,9 @@ body
       font-size: 1.6rem;
       float none
     p
-      padding: 0 0 0 10.5rem;
+      padding: 0 0 0 122px;
       letter-spacing: 0px;
-      margin-top: -1.8rem;
+      margin-top: -14px;
 	.footer a
 		font-size: 25px;
 </style>
