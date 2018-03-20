@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "my blog homepage",
   "author": "张韧 <zhangr@ethicall.cn>",
-  "private": true,
+  "private": true, 
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
